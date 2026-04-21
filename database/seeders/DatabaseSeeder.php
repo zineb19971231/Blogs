@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Article;
+use App\Models\Categorie;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,6 +17,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call([
+        ArticleSeeder::class,
+        CategorieSeeder::class,
+    ]);
+
         // User::factory(10)->create();
 
         User::factory()->create([
