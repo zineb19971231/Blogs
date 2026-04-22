@@ -53,19 +53,32 @@ Il permet aux utilisateurs de :
 - JavaScript (basique)
 
 ---
-
 ## 📂 Structure du projet
+
+```bash
 app/
-resources/views/
-├── articles/
-│ ├── index.blade.php
-│ └── show.blade.php
+resources/
+│
+├── views/
+│   ├── articles/
+│   │   ├── index.blade.php        
+│   │   └── show.blade.php         
+│   │
+│   └── auth/
+│       └── login.blade.php       
+│
 public/
+│
 ├── css/
-│ ├── blogs.css
-│ └── show.css
+│   ├── blogs.css                  
+│   ├── show.css                   
+│   └── login.css                 
+│
 routes/
-└── web.php
+│
+└── web.php                        
+```
+
 
 ---
 
