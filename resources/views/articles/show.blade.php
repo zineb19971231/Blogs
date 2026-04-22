@@ -9,7 +9,6 @@
     
     <!-- CSS global -->
     <link rel="stylesheet" href="{{ asset('css/blogs.css') }}">
-    
     <!-- CSS spécifique -->
     <link rel="stylesheet" href="{{ asset('css/show.css') }}">
 </head>

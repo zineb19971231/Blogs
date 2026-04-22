@@ -53,19 +53,32 @@ Il permet aux utilisateurs de :
 - JavaScript (basique)
 
 ---
-
 ## 📂 Structure du projet
+
+```bash
 app/
-resources/views/
-├── articles/
-│ ├── index.blade.php
-│ └── show.blade.php
+resources/
+│
+├── views/
+│   ├── articles/
+│   │   ├── index.blade.php        # Liste des articles
+│   │   └── show.blade.php         # Détail d’un article
+│   │
+│   └── auth/
+│       └── login.blade.php        # Page de connexion
+│
 public/
+│
 ├── css/
-│ ├── blogs.css
-│ └── show.css
+│   ├── blogs.css                  # Style général du blog
+│   ├── show.css                   # Style page détail article
+│   └── login.css                  # Style page login
+│
 routes/
-└── web.php
+│
+└── web.php                        # Définition des routes
+```
+
 
 ---
 
