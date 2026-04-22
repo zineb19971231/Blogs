@@ -75,7 +75,9 @@ php artisan serve
 📸 Captures d’écran
 
 🏠 Page d’accueil (Index)
+<img width="1893" height="907" alt="image" src="https://github.com/user-attachments/assets/6ae3d62c-870d-488a-bcdc-23233162c03b" />
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-capture ecran page home <img width="1893" height="907" alt="image" src="https://github.com/user-attachments/assets/ff342b4c-0203-49ca-984c-849cc6b3455e" />
+📖 Page détail (Show)
+
+<img width="1841" height="878" alt="image" src="https://github.com/user-attachments/assets/ef26429f-96c0-4ea1-b958-39a87f617cf4" />
 
