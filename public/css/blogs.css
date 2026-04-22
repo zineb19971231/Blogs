@@ -1,94 +1,112 @@
 body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #f5f3ef;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f7fb;
-    color: #111;
+    color: #222;
 }
 
 /* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 18px 40px;
+    padding: 20px 60px;
     background: white;
     border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
 }
 
 .logo {
-    font-weight: bold;
+    font-weight: 800;
+    letter-spacing: 2px;
     text-decoration: none;
-    color: #111;
+    color: black;
 }
 
 .links a {
     margin-left: 20px;
     text-decoration: none;
-    color: #666;
+    color: #555;
 }
 
-.links a:hover {
-    color: #000;
-}
-
-/* CONTAINER */
-.container {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 0 20px;
+/* HEADER */
+.page-header {
+    text-align: center;
+    padding: 60px 20px;
 }
 
 .title {
-    font-size: 30px;
-    margin-bottom: 30px;
+    font-size: 42px;
+    font-weight: 800;
 }
 
-/* ARTICLE CARD */
-.article-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.subtitle {
+    color: #777;
 }
 
+/* GRID */
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 40px 60px;
+}
+
+/* CARD */
 .card {
     background: white;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    transition: 0.2s;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }
 
-.category {
-    font-size: 11px;
-    background: #f0f0f0;
-    padding: 4px 10px;
-    border-radius: 20px;
-    display: inline-block;
-    color: #666;
+/* IMAGE */
+.card-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
-.article-title {
-    margin: 10px 0;
-    font-size: 20px;
+/* BODY */
+.card-body {
+    padding: 20px;
 }
 
-.date {
+.category-badge {
+    position: absolute;
+    background: black;
+    color: white;
+    padding: 5px 10px;
     font-size: 12px;
+}
+
+/* META */
+.meta {
+    font-size: 13px;
     color: #999;
+    margin-bottom: 10px;
 }
 
-.content {
+/* TITLE */
+.article-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* TEXT */
+.excerpt {
+    font-size: 14px;
     color: #555;
-    margin-top: 10px;
 }
 
-.empty {
-    text-align: center;
-    color: #888;
-    margin-top: 80px;
+/* BUTTON */
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
