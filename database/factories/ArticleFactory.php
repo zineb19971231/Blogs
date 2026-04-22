@@ -21,10 +21,10 @@ class ArticleFactory extends Factory
             'titre' => $this->faker->sentence(),
             'contenu' => $this->faker->paragraph(),
             'statut' => $this->faker->randomElement(['brouillon', 'publie']),
+            'image' => 'images/blogs/' . $this->faker->numberBetween(1, 3) . '.jpg',
             'publie_at' => $this->faker->dateTime(),
             'user_id' => \App\Models\User::factory(),
             'categorie_id' => \App\Models\Categorie::factory(),
-            'image' => $this->faker->imageUrl(640, 480),
 
         ];
     }
