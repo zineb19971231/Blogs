@@ -23,6 +23,18 @@
         <h1 class="title">Découvrir nos articles</h1>
         <p class="subtitle">Toute l'actualité et les réflexions de notre communauté.</p>
     </header>
+    {{-- filtrer par categories  --}}
+   <form method="GET" action="{{ route('articles.index') }}" class="filter-bar">
+    <select name="categorie_id">
+        <option value="">Toutes les catégories</option>
+        @foreach($categories as $categorie)
+            <option value="{{ $categorie->id }}">
+                {{ $categorie->nom }}
+            </option>
+        @endforeach
+    </select>
+    <button type="submit">Filtrer</button>
+</form>
 
     @if($articles->count() > 0)
         <div class="article-grid">
@@ -34,7 +46,7 @@
 
     <div class="card-body">
         <div class="meta">
-            {{ $article->created_at->format('d M Y') }}
+            {{ $article->publie_at }}
         </div>
 
         <h2 class="article-title">{{ $article->titre }}</h2>
