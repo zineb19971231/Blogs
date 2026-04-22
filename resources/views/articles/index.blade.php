@@ -27,9 +27,9 @@
    <form method="GET" action="{{ route('articles.index') }}" class="filter-bar">
     <select name="categorie_id">
         <option value="">Toutes les catégories</option>
-        @foreach($categories as $categorie)
-            <option value="{{ $categorie->id }}">
-                {{ $categorie->nom }}
+        @foreach($categories as $cat)
+            <option value="{{ $cat->id }}"{{ request('categorie_id') == $cat->id ? 'selected' : '' }}>
+                {{ $cat->nom }}
             </option>
         @endforeach
     </select>
@@ -42,6 +42,9 @@
          <article class="card">
     <div class="card-image">
         <img src="{{ asset($article->image) }}">
+         <div class="category-badge">
+        {{ $article->categorie->nom }}
+    </div>
     </div>
 
     <div class="card-body">
@@ -52,7 +55,7 @@
         <h2 class="article-title">{{ $article->titre }}</h2>
 
         <p class="excerpt">
-            {{ Str::limit($article->contenu, 100) }}
+            {{ Str::limit($article->contenu, 200) }}
         </p>
 
         <a href="{{ route('articles.show', $article->id) }}" class="read-more">
