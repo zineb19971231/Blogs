@@ -2,15 +2,21 @@
 
 namespace App\Http\Controllers;
 use App\Models\Article;
+use App\Models\Categorie;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-    public function index(){
-        $articles = Article::with(['categorie','user'])
-        ->latest()
-        ->get();
-        return view('articles.index', compact('articles'));
+    public function index(Request $request){
+        $query = Article::with(['categorie','user']);
+        if($request -> categorie_id){
+            $query->where('categorie_id', $request->categorie_id);
+        }
+    
+        $articles = $query->latest()->get();
+        $categories = Categorie::all();
+
+        return view('articles.index', compact('articles', 'categories'));
     }
 
     public function show($id){

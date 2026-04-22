@@ -16,7 +16,7 @@ return new class extends Migration
             $table-> string('titre');
             $table -> text('contenu');
             $table-> enum('statut',['brouillon','publie'])-> default('brouillon');
-            $table->timestamp('publie_at')->nullable();
+            $table->dateTime('publie_at')->nullable();
             $table ->foreignId('user_id')
             ->constrained('users')
             ->onDelete('cascade');
