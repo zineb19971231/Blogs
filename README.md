@@ -61,22 +61,22 @@ resources/
 │
 ├── views/
 │   ├── articles/
-│   │   ├── index.blade.php        # Liste des articles
-│   │   └── show.blade.php         # Détail d’un article
+│   │   ├── index.blade.php        
+│   │   └── show.blade.php         
 │   │
 │   └── auth/
-│       └── login.blade.php        # Page de connexion
+│       └── login.blade.php       
 │
 public/
 │
 ├── css/
-│   ├── blogs.css                  # Style général du blog
-│   ├── show.css                   # Style page détail article
-│   └── login.css                  # Style page login
+│   ├── blogs.css                  
+│   ├── show.css                   
+│   └── login.css                 
 │
 routes/
 │
-└── web.php                        # Définition des routes
+└── web.php                        
 ```
 
 
