@@ -8,17 +8,15 @@
 <body>
 
 <div class="container">
-    
-    <!-- LEFT SIDE (IMAGE) -->
-    <div class="image-side">
-        <img src="{{ asset('images/blogs/1.jpg') }}" alt="Login Image">
+        <div class="image-side">
+        <img src="{{ asset('images/blogs/bg.jpg') }}" alt="Login Image">
     </div>
 
     <div class="form-side">
         <div class="form-box">
             <h2>Connexion</h2>
 
-            <form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="{{ route('auth.login') }}">
                 @csrf
 
                 <div class="input-group">
@@ -35,8 +33,6 @@
             </form>
         </div>
     </div>
-
 </div>
-
 </body>
 </html>

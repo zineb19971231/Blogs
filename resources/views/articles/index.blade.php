@@ -14,7 +14,7 @@
     <a href="/" class="logo">JOURNAL</a>
     <div class="links">
         <a href="/">Accueil</a>
-        <a href="{{ route('login.show') }}" class="login-link">Connexion</a>
+        <a href="{{ route('auth.login') }}" class="login-link">Connexion</a>
     </div>
 </nav>
 
