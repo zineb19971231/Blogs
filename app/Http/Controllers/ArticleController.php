@@ -24,4 +24,29 @@ class ArticleController extends Controller
         ->findOrFail($id);
         return view('articles.show', compact('article'));
     }
+
+    public function create(){
+        $categories = Categorie::all();
+        return view('articles.create',compact('categories'));
+    }
+
+    // public function index(){
+    //     $articles = Article::with('status','publie');
+    //     $categories = Categorie::all();
+    //     return view ('articles.index', compact('articles','categories'));
+    // }
+
+    public function store(Request $request){
+        $validation=$request->validate([
+            'titre' => 'required',
+            'contenu' => 'required',
+            'statut' => 'required',
+            'categorie_id' => 'required|exists:categories,id',
+        ]);
+        $validation['user_id'] = 5;
+        $validation['publie_at'] = now();
+        Article::create($validation);
+        return redirect()->route('articles.index')->with('success', 'Article créé avec succès.');
+    }
+   
 }

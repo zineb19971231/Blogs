@@ -22,8 +22,10 @@
     <header class="page-header">
         <h1 class="title">Découvrir nos articles</h1>
         <p class="subtitle">Toute l'actualité et les réflexions de notre communauté.</p>
+    <a href="{{ route('articles.create') }}" class="btn-add">
+        + Ajouter un article
+    </a>
     </header>
-    {{-- filtrer par categories  --}}
    <form method="GET" action="{{ route('articles.index') }}" class="filter-bar">
     <select name="categorie_id">
         <option value="">Toutes les catégories</option>
