@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Categorie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class ArticleController extends Controller
 {
@@ -18,6 +20,11 @@ class ArticleController extends Controller
 
         return view('articles.index', compact('articles', 'categories'));
     }
+
+        public function dashboard(){
+            $articles = Article::where('user_id', Auth::id())->get();
+            return view('bloger.dashboard', compact('articles'));
+        }
 
     public function show($id){
         $article = Article::with(['categorie','user'])

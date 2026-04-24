@@ -5,9 +5,9 @@
     font-family: Arial, sans-serif;
 }
 
+/* Body */
 body {
     height: 100vh;
-    background: #f4f6f9;
 }
 
 .container {
@@ -15,52 +15,34 @@ body {
     height: 100vh;
 }
 
-/* LEFT IMAGE */
+
 .image-side {
     flex: 1;
-    background: url('images/blogs/bg.jpg') no-repeat center center/cover;
-    position: relative;
+    background: url('../images/blogs/bg.jpg') no-repeat center center/cover;
 }
 
-.overlay {
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+.image-side img {
+    display: none;
 }
 
-.overlay h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.overlay p {
-    font-size: 18px;
-}
-
-/* RIGHT FORM */
+/* FORM SIDE */
 .form-side {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
+    background: #f4f6f9;
 }
 
 .form-box {
-    width: 80%;
-    max-width: 400px;
+    width: 350px;
 }
 
 .form-box h2 {
     margin-bottom: 20px;
-    text-align: center;
 }
 
+/* INPUT */
 .input-group {
     margin-bottom: 15px;
 }
@@ -73,23 +55,17 @@ body {
 .input-group input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
 }
 
 button {
     width: 100%;
-    padding: 12px;
-    background: #007bff;
+    padding: 10px;
+    background: black;
+    color: white;
     border: none;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 6px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #0056b3;
+    background: #333;
 }
-
-
