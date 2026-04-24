@@ -1,6 +1,8 @@
 
  <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
-
+<a href="{{ route('articles.create') }}" class="btn-add">
+    + Ajouter un article
+</a>
 
 <h3>Mes Articles</h3>
 <form method="POST" action="{{ route('auth.logout') }}">

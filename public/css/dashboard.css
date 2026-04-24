@@ -64,3 +64,17 @@ h3 {
     background: red;
     color: white;
 }
+.btn-add {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-add:hover {
+    background: #218838;
+}
