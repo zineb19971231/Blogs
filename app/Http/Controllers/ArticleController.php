@@ -48,5 +48,10 @@ class ArticleController extends Controller
         Article::create($validation);
         return redirect()->route('articles.index')->with('success', 'Article créé avec succès.');
     }
+<<<<<<< Updated upstream
    
+=======
+
+ 
+>>>>>>> Stashed changes
 }
