@@ -32,4 +32,20 @@ class ArticleController extends Controller
         return view('articles.show', compact('article'));
     }
 
+    public function create(){
+        $categories = Categorie::all();
+        return view('articles.create', compact('categories'));
+    }
+    public function store(Request $request){
+        $validation = $request->validate([
+            'titre' => 'required|string',
+            'contenu' => 'required|string',
+            'statut' => 'required|in:publie,brouillon',
+            'categorie_id' => 'required|exists:categories,id',
+        ]);
+
+        Article::create($validation + ['user_id' => Auth::id()]);
+
+        return redirect()->route('dashboard')->with('success', 'Article created successfully.');
+    }
 }
