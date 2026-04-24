@@ -23,7 +23,6 @@
         <h1 class="title">Découvrir nos articles</h1>
         <p class="subtitle">Toute l'actualité et les réflexions de notre communauté.</p>
     </header>
-    {{-- filtrer par categories  --}}
    <form method="GET" action="{{ route('articles.index') }}" class="filter-bar">
     <select name="categorie_id">
         <option value="">Toutes les catégories</option>
