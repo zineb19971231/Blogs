@@ -48,4 +48,10 @@ class ArticleController extends Controller
 
         return redirect()->route('dashboard')->with('success', 'Article created successfully.');
     }
+
+    public function destroy($id){
+        $article = Article::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
+        $article->delete();
+        return redirect()->route('dashboard')->with('success', 'Article deleted successfully.');
+    }
 }

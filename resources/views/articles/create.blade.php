@@ -9,6 +9,9 @@
 
 <div class="container">
 
+<a href="{{ route('articles.index') }}" class="btn-back">
+    Retour aux articles
+</a>
     <h2>Ajouter un article</h2>
 
     @if ($errors->any())

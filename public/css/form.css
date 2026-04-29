@@ -60,3 +60,16 @@ button:hover {
     list-style: none;
     color: #721c24;
 }
+.btn-back {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 8px 12px;
+    background: #6b7280;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-back:hover {
+    background: #4b5563;
+}
